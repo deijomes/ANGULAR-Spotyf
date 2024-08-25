@@ -1,0 +1,27 @@
+
+  
+    <div class="container-fluid">
+      <form class="d-flex" role="search" (submit)="buscar($event, termino.value)">
+        <input class="form-control me-2" type="text" placeholder="Buscar Artista" #termino>
+      </form>
+
+      <div class="mt-5">
+        <app-loading *ngIf="loadingm"></app-loading>
+        <app-tarjetas [intems]="artistas"></app-tarjetas>
+
+      </div>
+
+      
+
+     
+
+     
+    </div>
+    
+    
+    
+  
+  
+
+
+  

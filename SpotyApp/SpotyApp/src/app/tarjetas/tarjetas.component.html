@@ -1,0 +1,18 @@
+<div class="row row-cols-1 row-cols-md-3 g-4 mt-5">
+    <div (click)="verArtista(item)" *ngFor="let item of intems" class="col">
+      <div class="card h-100 puntero">
+        <img [src]="item.images | arreImages" class="card-img-top" alt="Imagen de la canción">
+        <div class="card-body">
+          <h5 class="card-title">{{ item.name }}</h5>
+  
+          <span   *ngFor="let artist of item.artists; let last = last" class="badge rounded-pill text-bg-info"> 
+               {{ artist.name }}
+              <span *ngIf="!last">, </span> </span>
+  
+         
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
